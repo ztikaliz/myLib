@@ -1,0 +1,36 @@
+package com.example.testapp
+
+import android.app.Activity
+import android.os.Bundle
+import android.transition.Explode
+import android.transition.Fade
+import android.transition.Slide
+import android.view.Window
+import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AppCompatActivity
+
+class TestAnim2 : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
+        setContentView(R.layout.activity_test_anim2)
+
+        //initAnimation()
+    }
+    private fun initAnimation(){
+        /**Có 3 loại anim intent:
+        Explode() : di chuyển các khung hiển thị vào trong hoặc ra khỏi trung tâm của cảnh.
+        Slide() : di chuyển khung hiển thị vào hoặc ra khỏi một trong các cạnh của cảnh.
+        Fade() : thêm hoặc xoá một khung hiển thị khỏi cảnh bằng cách thay đổi độ mờ của khung hiển thị đó.
+         **/
+        val anim = Slide()
+
+        /**animation ngoại trừ background status và navigation bar**/
+        anim.excludeTarget(android.R.id.statusBarBackground, true)
+        anim.excludeTarget(android.R.id.navigationBarBackground, true)
+
+        /**setting intent animation in và out activity**/
+        window.enterTransition = anim
+        window.exitTransition = anim
+    }
+}

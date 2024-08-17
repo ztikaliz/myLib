@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="flash"
+        android:id="@+id/flash"
+        android:icon="@drawable/baseline_flash_on_24"/>
+    <item android:title="test"
+        android:id="@+id/test"
+        android:icon="@drawable/test"/>
+    <item android:id="@+id/placeholder"
+        android:title="" />
+    <item android:title="clap"
+        android:id="@+id/clap"
+        android:icon="@drawable/clap"/>
+    <item android:title="setting"
+        android:id="@+id/setting"
+        android:icon="@drawable/settings"/>
+</menu>
